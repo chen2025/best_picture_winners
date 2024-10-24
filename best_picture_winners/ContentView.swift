@@ -1,6 +1,14 @@
 import SwiftUI
 
-/// The main view that displays the Oscar Best Picture winners by year and allows users to select a year to fetch the film information.
+/// This app, Oscar Best Picture Winner Finder, allows users to explore the Academy Award winners for Best Picture from 2005 to 2023.
+/// The user can either enter a year manually using a text field or select a year using a slider. Once the year is chosen,
+/// clicking the "Fetch Film" button will display the corresponding Best Picture winner, including the film's name, an image, and a brief description.
+///
+/// How to interact with the app:
+/// Text Field: Enter a year (between 2005 and 2023) to manually select a year.
+/// Slider: Use the slider to select a year within the valid range.
+/// Fetch Button: After selecting a year using either method, press the "Find Best Picture" button to retrieve and display details of the Oscar-winning film
+///
 struct ContentView: View {
     @State private var textYear: String = "2005"     // The input for the year in text form.
     @State private var doubleYear: Double = 2005     // The input for the year in slider form.
