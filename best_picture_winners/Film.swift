@@ -1,6 +1,10 @@
 import SwiftUI
 
+/// An enum representing the Best Picture Oscar winners from 2005 to 2023.
+/// Each case in the enum corresponds to a year and holds relevant details about the film for that year.
 enum Film: String, CaseIterable, Identifiable {
+    
+    // Enum cases for each year's best picture film (2005-2023)
     case film_2005 = "film_2005"
     case film_2006 = "film_2006"
     case film_2007 = "film_2007"
@@ -21,8 +25,11 @@ enum Film: String, CaseIterable, Identifiable {
     case film_2022 = "film_2022"
     case film_2023 = "film_2023"
     
-    var id: Film {self}
+    /// The unique identifier for each enum case.
+    var id: Film { self }
     
+    /// The name of the film associated with each enum case.
+    /// - Returns: A `String` representing the film's name.
     var name: String {
         switch self {
         case .film_2005: return "Crash"
@@ -47,6 +54,9 @@ enum Film: String, CaseIterable, Identifiable {
         }
     }
     
+    /// The image resource representing the film poster or image for each film.
+    /// This is a custom type, `ImageResource`, which should contain references to the image assets in the app.
+    /// - Returns: An `ImageResource` representing the image for the film.
     var image: ImageResource {
         switch self {
         case .film_2005: return .crash
@@ -71,7 +81,8 @@ enum Film: String, CaseIterable, Identifiable {
         }
     }
 
-    
+    /// A short description or synopsis of the film.
+    /// - Returns: A `String` that provides a brief description of the film's plot or theme.
     var about: String {
         switch self {
         case .film_2005:
